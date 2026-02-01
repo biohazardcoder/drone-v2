@@ -3,12 +3,10 @@
 import { useState } from "react"
 import Link from "next/link"
 import {
-    Languages,
     ChevronDown,
     Menu,
     X,
 } from "lucide-react"
-import { Button } from "../ui/button"
 
 export const Navbar = () => {
     const [open, setOpen] = useState(false)
@@ -24,7 +22,7 @@ export const Navbar = () => {
                 <h1 className="text-xl font-semibold text-white">Logo</h1>
 
                 <nav className="hidden md:flex items-center gap-8 text-sm font-semibold">
-                    <Link href="#" className="text-white/70 hover:text-white">
+                    <Link href="/" className="text-white/70 hover:text-white">
                         Platform
                     </Link>
 
@@ -61,7 +59,7 @@ export const Navbar = () => {
             {mobileOpen && (
                 <div className="md:hidden absolute left-0 right-0 top-16 z-99 bg-[#1f1f1f] border-t border-white/10">
                     <div className="flex flex-col px-6 py-6 space-y-5 text-sm font-semibold text-white">
-                        <Link href="#">Platform</Link>
+                        <Link href="/">Platform</Link>
 
                         <button
                             onClick={() => setMobileSolutions(!mobileSolutions)}

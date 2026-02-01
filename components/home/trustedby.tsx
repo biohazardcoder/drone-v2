@@ -1,16 +1,14 @@
 "use client"
 
-import Image from "next/image"
-
 const logos = [
-    { name: "Syngenta", src: "/trusted1.avif" },
-    { name: "Corteva", src: "/trusted2.avif" },
-    { name: "CHS", src: "/trusted3.avif" },
-    { name: "ScottsMiracleGro", src: "/trusted4.avif" },
-    { name: "ScottsMiracleGro", src: "/trusted5.avif" },
-    { name: "Bayer", src: "/trusted6.avif" },
-    { name: "Advanta", src: "/trusted7.avif" },
-    { name: "Monrovia", src: "/trusted8.avif" },
+    { name: "Artel", src: "/t1.png" },
+    { name: "Imzo", src: "/imzo.png" },
+    { name: "Akfa", src: "/akfa.png" },
+    { name: "Uztelecom", src: "/uztelecom.png" },
+    { name: "Huawei", src: "/huawei.png" },
+    { name: "Ozmet", src: "/ozmet.png" },
+    { name: "SQB", src: "/sqb.webp" },
+    { name: "Uzum", src: "/uzum.png" },
 ]
 
 export const TrustedBy = () => {
@@ -26,15 +24,12 @@ export const TrustedBy = () => {
                     {logos.map((logo, i) => (
                         <div
                             key={i}
-                            className="flex items-center justify-center opacity-80 transition hover:opacity-100"
+                            className="flex items-center justify-center "
                         >
-                            <Image
+                            <img
                                 src={logo.src}
                                 alt={logo.name}
-                                width={160}
-                                height={80}
-                                sizes="(max-width: 640px) 120px, 160px"
-                                className="h-8 sm:h-10 md:h-12 w-auto object-contain grayscale"
+                                className={`grayscale object-cover object-center`}
                             />
                         </div>
                     ))}
